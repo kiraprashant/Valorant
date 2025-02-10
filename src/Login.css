@@ -1,0 +1,54 @@
+
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('./assets/gaming-background.jpg'); /* Ensure this path is correct */
+    background-size: cover;
+    background-position: center;
+}
+
+.login-box {
+    background-color: #fff; /* Set container background to white */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Increased shadow blur */
+    min-width: 320px; /* Set minimum width */
+    width: 480px; /* Set width */
+    text-align: center;
+    color: #000; /* Ensure text inside the box is black */
+}
+
+
+.form-group {
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px; /* Reduced padding for input fields */
+   /* margin-top: 3px; /* Reduced margin between label and input */
+    border: 1px solid #ff6666; /* Border to define input fields */
+    border-radius: 6px;
+    background-color: #f9f9f9; /* Light grey for input background */
+    color: #000; /* Black text for inputs */
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #ff6666; /* Softer red for buttons */
+    color: #fff; /* White text for better readability */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #ff4d4d; /* Slightly darker red on hover */
+    transform: translateY(-2px); /* Subtle lift effect */
+} 
