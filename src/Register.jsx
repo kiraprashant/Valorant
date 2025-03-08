@@ -1,5 +1,6 @@
 import React from 'react';
 import './Login.css'; // Reuse the same CSS for styling
+import { Link } from 'react-router-dom';
 
 function Register() {
   return (
@@ -23,8 +24,11 @@ function Register() {
             <label htmlFor="mobile">Mobile Number</label>
             <input type="tel" id="mobile" className="form-control" placeholder="Enter your mobile number" />
           </div>
-          <button type="submit" className="btn btn-primary">Register</button>
+          <button type="submit" className="btn btn-primary mb-5">Register</button>
         </form>
+        <p className="login-text">
+          Already have the account? <Link to="/login">Click here</Link>
+        </p>
       </div>
     </div>
   );

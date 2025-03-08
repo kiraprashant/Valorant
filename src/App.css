@@ -1,28 +1,30 @@
+/* Global Styles */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
     /* background-color: #121212; Keep the overall page background dark for contrast */
     color: #000; /* Set default text color to black */
- /* Prevent horizontal scrolling */
+    /* Prevent horizontal scrolling */
+}
+
+/* Headings */
+h2, h3 {
+    margin-bottom: 20px;
+    color: #ff6666; /* Keep heading color for contrast */
+    font-weight: bolder;
+    text-align: center;
 }
 
 h2 {
-    margin-bottom: 20px;
-    color: #ff6666; /* Keep heading color for contrast */
-    font-weight: bolder;
     font-size: 48px; /* Increase font size */
-    text-align: center;
 }
 
 h3 {
-    margin-bottom: 20px;
-    color: #ff6666; /* Keep heading color for contrast */
-    font-weight: bolder;
     font-size: 28px; /* Increase font size */
-    text-align: center;
 }
 
+/* Description Styles */
 .Description_agents {
     width: 50%;
     /* margin: auto; */
@@ -33,13 +35,13 @@ h3 {
     margin: auto;
 }
 
-
-.Description_performance{
+.Description_performance {
     line-height: 36px;
     color: #c9c9c9;
 }
 
-.Join_Button {
+/* Button Styles */
+.Join_Button,.Generate_Logo{
     width: 200px;
     padding: 12px;
     border: none;
@@ -50,14 +52,20 @@ h3 {
     transition: background-color 0.3s, transform 0.2s;
 }
 
-.footer{
-    text-align:"center";
-    margin: auto;
-    color:"red";
-    background-color:"#000";
+.Generate_Logo{
+    width: 140px;
+    padding: 8px;
 }
 
+/* Footer Styles */
+.footer {
+    text-align: center;
+    margin: auto;
+    background-color: #000;
+    margin-bottom: "0";
+}
 
+/* Image Styles */
 .weapon-image {
     width: 100%;
     height: 250px; /* Consistent image height */
@@ -66,12 +74,7 @@ h3 {
     border-radius: 8px 8px 0 0; /* Rounded top corners */
 }
 
-
-
-.row {
-    margin: 0; /* Remove default margin to prevent overflow */
-}
-
+/* Card Styles */
 .weapon-card {
     height: 450px;
     display: flex;
@@ -101,15 +104,8 @@ h3 {
     color: #333; /* Darker text color for contrast */
 }
 
-
 /* Media query for tablet screens and smaller */
-
-@media (max-width: 768px) { /* Adjust the max-width as needed for your design */
-    .Description_agents {
-        width: 100%;
-    }
-}
-
+/* Hero Section Styles */
 .hero-heading {
     font-size: 2.5em;
     font-weight: bold;
@@ -125,8 +121,19 @@ h3 {
     color: #ffffff; /* Example color */
 }
 
+.mobile-navbar.show{
+    display: none !important;
+}
+.desktop-navbar{
+    display: block;
+}
+
+
 /* Media query for tablet screens and smaller */
 @media (max-width: 768px) {
+    .Description_agents {
+        width: 100%;
+    }
     .hero-heading {
         font-size: 1.8em; /* Smaller font size for smaller screens */
     }
@@ -138,8 +145,21 @@ h3 {
     .Description_agents {
         width: 100%;
     }
+    .desktop-navbar{
+        display: none !important;
+    }
+    .mobile-navbar{
+        display: block !important;
+    }
+    .mobile-navbar .show {
+        display: block !important;
+    }
+    
 }
 
+
+
+/* Navbar Styles */
 .navbar .navbar-nav .nav-link {
     color: #fff !important; /* Default link color with !important to override Bootstrap */
     transition: color 0.3s;
@@ -153,4 +173,56 @@ h3 {
 .navbar .navbar-nav .nav-link.active {
     color: #ff6666 !important; /* Active link color with !important */
     text-decoration: underline; /* Underline for active link */
+}
+
+/* About Section Styles */
+.about-section,.contact-section {
+    background-color: #f0f0f0; /* Light background for contrast */
+    padding: 40px 0;
+    min-height:100vh
+}
+
+.why-compete h4 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.list-group-item {
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s, color 0.3s;
+}
+
+.list-group-item:hover {
+    background-color: #ff6666;
+    color: #333333; /* Use a darker gray color for better contrast */
+    transform: translateY(-2px);
+}
+
+.list-group-numbered {
+    list-style-type: decimal; /* Ensure numbers are displayed */
+    padding-left: 20px; /* Add padding to align numbers */
+}
+
+.list-group-numbered .list-group-item {
+    display: list-item; /* Ensure list items are displayed as list items */
+    list-style-position: inside; /* Position numbers inside the list item */
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s, color 0.3s;
+}
+
+.list-group-numbered .list-group-item:hover {
+    background-color: #ff6666;
+    color: #333333; /* Use a darker gray color for better contrast */
+    transform: translateY(-2px);
+}
+
+.contact-container{
+    background-color: #fff; /* Set container background to white */
+    padding: 40px;
+    border-radius: 12px;
+   /* box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Increased shadow blur */
+    text-align: center;
+    color: #000; /* Ensure text inside the box is black */
 }

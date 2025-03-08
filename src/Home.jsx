@@ -29,7 +29,7 @@ function Home() {
 
   return (
     <div>
-      <main className=''>
+      <main className='' style={{backgroundColor:"#f0f0f0"}} >
         <section
           id="agents"
           style={{
@@ -61,8 +61,8 @@ function Home() {
             <div className='row mb-4'>
               {
                 Agents.map((agent, index) => (
-                  <div className="col-md-4 col-sm-6 col-xs-12" key={index}>
-                    <div className="card" style={{ margin: '10px' }}>
+                  <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12" key={index}>
+            <div className="card" style={{ margin: '10px' }}>
                       <img src={agent.image} alt={agent.name} className="card-img-top" />
                       <div className="container">
                         <h4><b>{agent.name}</b></h4>
@@ -83,7 +83,7 @@ function Home() {
         <div className='row mb-4'>
               {
                 WeaponsSkin.map((agent, index) => (
-                  <div className="col-md-4 col-sm-6 col-xs-12" key={index}>
+                  <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12" key={index}>
                     <div className="card weapon-card" style={{ margin: '10px' }}>
                       <img src={agent.image} alt={agent.name} className="card-img-top weapon-image" />
                       <div className="container">
@@ -195,14 +195,6 @@ function Home() {
 
       </main>
 
-      <footer className='footer'>
-        <p style={{
-          textAlign: "center",
-          backgroundColor: "#000",
-          color: "#fff",
-          padding: "20px"
-        }}>&copy; 2025 Valorant Compitetion</p>
-      </footer>
     </div>
   );
 }
