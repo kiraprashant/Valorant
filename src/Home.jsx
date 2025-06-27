@@ -9,6 +9,7 @@ import Vandal from "./assets/Vandal.webp"
 import Ghost from "./assets/Ghost.webp"
 import Bulldog from "./assets/Bulldog.jpg"
 import Map from "./assets/map.avif"
+import { Link } from 'react-router-dom';
 
 
 function Home() {
@@ -189,7 +190,7 @@ function Home() {
                 and rise to the top—this is your chance to make your mark! 🚀🎯
               </p>
             </div>
-            <button className='Join_Button'>Join Battle</button>
+            <button className='Join_Button'><Link style={{color:"#fff",textDecoration:"none"}} to = "/particapate">Join Battle</Link></button>
           </div>
         </section>
 

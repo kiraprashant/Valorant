@@ -11,17 +11,17 @@ const particapate = () => {
 
     const [error,seterror] = useState("")
     const [TeamDetails,setTeamDetails] = useState({
-       TeamName:"noob",
+       TeamName:"",
        TeamLogo:"",
-       LeaderName:"lolo",
-       LeaderGameID:"gfhfh",
-       LeaderEmail:"hyrdt"
+       LeaderName:"",
+       LeaderGameID:"",
+       LeaderEmail:""
     })
     const [members, setMembers] = useState([
-        { id: uuidv4(), name: "noob", gameId: "kjhjuk", email: "hjuu6y@gmail" }, // Default 4 members
-        { id: uuidv4(), name: "loo", gameId: "kljytgg", email: "kjihy@gmail" },
-        { id: uuidv4(), name: "goo", gameId: "jhtryuf", email: "llokhhy@gmail.com" },
-        { id: uuidv4(), name: "noob", gameId: "lkohgtde", email: "lllgmail.com" },
+        { id: uuidv4(), name: "", gameId: "", email: "" }, // Default 4 members
+        { id: uuidv4(), name: "", gameId: "", email: "" },
+        { id: uuidv4(), name: "", gameId: "", email: "" },
+        { id: uuidv4(), name: "", gameId: "", email: "" },
       ]);
  
     const openAimodel = () => {
@@ -30,7 +30,24 @@ const particapate = () => {
 
     const GenerateLogo = async() =>{
 
+      try{
 
+        const Logo = "create the logo "
+        // kiraprashant  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
+        //prashantrn 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
+
+/// Use the generated image (it's a Blob)
+        const imageUrl = URL.createObjectURL(image);
+        console.log(imageUrl)
+        setImage(imageUrl)
+        console.log(Logo + Prompt)
+
+          }
+          catch(e){
+            console.log(e)
+            seterror("You have exceeded your monthly included credits ")
+            console.log(error)
+          }
 
     }
 
@@ -67,7 +84,6 @@ const particapate = () => {
             email: '',
           };
           setMembers([...members, newField]);
-          console.log(fields);
     }
 
       const HandleSubmit = () =>{
@@ -85,6 +101,20 @@ const particapate = () => {
   }
 
   const fulldetails = {...TeamDetails,Members:validMembers}
+
+  const allGameIds = [TeamDetails.LeaderGameID, ...members.map(m => m.gameId)];
+  const TeamGameid = [TeamDetails.LeaderGameID]
+  const MemberGameid = [...members.map(m => m.gameId)]
+
+  const finalGameIds = [...TeamGameid,...MemberGameid]
+  console.log("... final",finalGameIds)
+  const uniqueGameIds = new Set(finalGameIds);
+
+  // Check for duplicates
+  if (uniqueGameIds.size !== finalGameIds.length) {
+      alert("Each player must have a unique game ID!");
+      return;
+  }
 
   console.log("Submitting Team:", fulldetails);
       }

@@ -1,6 +1,8 @@
 import React from 'react';
 import FounderImage from './assets/founder.jpeg'; // Ensure the path is correct
 import CoFounderImage from './assets/cofounder.jpeg'; // Ensure the path is correct
+import CofounderImage2 from './assets/cofounder2.jpeg'; // Ensure the path is correct
+import CofounderImage3 from './assets/cofounder3.jpeg'; // Ensure the path is correct
 
 function About() {
 
@@ -34,24 +36,55 @@ function About() {
         <div className="team-section mt-5">
           <h4 className="text-center mb-3" style={{ color: '#ff6666' }}>Meet the Team</h4>
           <div className="row">
-            <div className="col-md-6">
+
+            
+            <div className="col-md-6 mb-4">
               <div className="card">
                 <img src={FounderImage} className="card-img-top" alt="Founder" style={{ width: '100%', height: '450px', objectFit: 'cover', objectPosition: 'top' }} />
                 <div className="card-body">
-                  <h5 className="card-title">Founder</h5>
+                  <h5 className="card-title">Founder - (Project Manager)</h5>
+                  <h4 className="card-title">Varun Likhitkar</h4>
+                  <p className="card-text">Leads project planning, coordinates teams, ensures goals and deadlines met.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-6 mb-4">
+              <div className="card">
+                <img src={CofounderImage3} className="card-img-top" alt="Co-Founder" style={{ width: '100%', height: '450px', objectFit: 'cover', }} />
+                <div className="card-body">
+                  <h5 className="card-title">Co-Founder - (Project Assistant)</h5>
+                  <h4 className="card-title">Khushi Yadav</h4>
+                  <p className="card-text">Supports project tasks, manages schedules, organizes documents, aids communication flow.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-6 mb-4">
+              <div className="card">
+                <img src={CoFounderImage} className="card-img-top" alt="Co-Founder" style={{ width: '100%', height: '450px', objectFit: 'cover', objectPosition: '50% 20%' }} />
+                <div className="card-body">
+                  <h5 className="card-title">Co-Founder  - (Project Developer Frontend)</h5>
+                  <h4 className="card-title">Anshul BarKhane</h4>
                   <p className="card-text">Responsible for managing the frontend development, ensuring a seamless user experience and engaging interface.</p>
                 </div>
               </div>
             </div>
-            <div className="col-md-6">
+
+            <div className="col-md-6 mb-4">
               <div className="card">
-                <img src={CoFounderImage} className="card-img-top" alt="Co-Founder" style={{ width: '100%', height: '450px', objectFit: 'cover', objectPosition: '50% 20%' }} />
+                <img src={CofounderImage2} className="card-img-top" alt="Co-Founder" style={{ width: '100%', height: '450px', objectFit: 'cover', objectPosition: '50% 80%' }} />
                 <div className="card-body">
-                  <h5 className="card-title">Co-Founder</h5>
+                  <h5 className="card-title">Co-Founder (Project Developer backend)</h5>
+                  <h4 className="card-title">Satyam Gurjar</h4>
                   <p className="card-text">Oversees the backend development, ensuring robust functionality and secure data management.</p>
                 </div>
               </div>
             </div>
+
+  
+
+
           </div>
         </div>
       </div>
