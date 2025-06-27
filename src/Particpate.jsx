@@ -33,8 +33,7 @@ const particapate = () => {
       try{
 
         const Logo = "create the logo "
-        // kiraprashant  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
-        //prashantrn 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
+
 
 /// Use the generated image (it's a Blob)
         const imageUrl = URL.createObjectURL(image);
