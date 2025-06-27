@@ -34,7 +34,7 @@ const particapate = () => {
 
         const Logo = "create the logo "
 
-       const star = ""
+      
 /// Use the generated image (it's a Blob)
         const imageUrl = URL.createObjectURL(image);
         console.log(imageUrl)
